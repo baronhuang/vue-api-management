@@ -3,3 +3,9 @@
 也可以按照选择环境进行api的接口测试。
 
 ![](https://github.com/baronhuang/vue-api-management/raw/master/static/ex.png) 
+
+#用法
+`npm run dev` 启动前端开发项目
+`npm run serve` 启动后端开发项目
+`npm run build` 压缩编译前端项目到dist
+`npm run serve:prod` 启动生产环境项目
