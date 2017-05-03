@@ -1,0 +1,67 @@
+/**
+  自定义的公用函数
+*/
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+.page-title {
+  margin-bottom: 16px;
+}
+
+select {
+  &.ivu-input {
+    cursor: pointer;
+  }
+}
+
+/*单行省略号，带宽度*/
+.ellipsis(@width){
+  width: @width;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*单行省略号*/
+.ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*兼容透明度设置*/
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+/*禁用选择文字*/
+.user-select(@select) {
+  -webkit-user-select: @select;
+  -moz-user-select: @select;
+  -ms-user-select: @select; // IE10+
+  user-select: @select;
+}
+
+.spin-icon-load{
+  animation: ani-spin 1s linear infinite;
+}
+@keyframes ani-spin {
+  from { transform: rotate(0deg);}
+  50%  { transform: rotate(180deg);}
+  to   { transform: rotate(360deg);}
+}
